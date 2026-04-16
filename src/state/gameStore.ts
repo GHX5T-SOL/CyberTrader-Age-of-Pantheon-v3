@@ -1,5 +1,6 @@
 import { create } from "zustand";
-import { persist, createJSONStorage } from "zustand/middleware";
+// Force CJS middleware entry to avoid import.meta in web bundle.
+import { persist, createJSONStorage } from "zustand/middleware.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   applyEnergyDrain,
