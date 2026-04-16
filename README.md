@@ -1,50 +1,42 @@
-# Welcome to your Expo app 👋
+# CyberTrader: Age of Pantheon (MVP)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Mobile-first Expo game MVP where the player is a rogue AI Eidolon booting a pirate cyberdeck OS and trading fictional S1LKROAD commodities to survive Energy drain and manage Heat.
 
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Install and Run
 
 ```bash
-npm run reset-project
+npm install
+npm run start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Platform commands:
 
-## Learn more
+```bash
+npm run ios
+npm run android
+npm run web
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Verification Commands
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run typecheck
+npm run lint
+npm test
+npx expo export --platform web
+```
 
-## Join the community
+## Implemented Core Loop
 
-Join our community of developers creating universal apps.
+- Intro cinematic stage and boot transition.
+- Login with explicit `dev-identity` mode (wallet adapters scaffolded).
+- Pirate OS cyberdeck metrics: Energy, `0BOL`, `$OBOL` status, Heat, Rank, OS tier.
+- S1LKROAD 4.0 market with live tick advancement, chart, buy/sell, positions, and news.
+- Burger-menu pages: profile, settings, inventory, progression, rank, leaderboard, rewards, notifications, help, legal.
+- Rank and OS unlock progression logic with deterministic simulation tests.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Currency and Compliance
+
+- `0BOL` is non-withdrawable in-game currency.
+- `$OBOL` integration is feature-flag oriented and defaults to locked state.
+- No guaranteed-profit language or gambling/loot-box mechanics in MVP.
